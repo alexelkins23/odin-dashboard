@@ -21,8 +21,8 @@
 }
 
 .icon {
-  height: 100%;
-  width: 90px;
+  height: 100px;
+  width: 100px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30%;
@@ -145,6 +145,83 @@
 .projects {
   grid-row: 3 / 5;
   grid-column: 2;
+  display: grid;
+  grid-template-rows: 1fr 20fr;
+  background-color: rgb(225, 231, 235);
+}
+
+.projects-title {
+  grid-row: 1;
+  align-self: end;
+  margin: 30px 0 0 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.card-container {
+  grid-row: 2;
+  display: grid;
+  gap: 20px;
+  padding: 10px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 0.2fr 3fr 1fr 1fr 1fr;
+  border-radius: 10px;
+  background-color: white;
+  padding-right: 5px;
+  box-shadow: 2px 5px 5px rgb(198, 198, 198);
+}
+
+.card-style {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  background-color: rgb(251, 197, 63);
+  border-radius: 10px 0 0 10px;
+}
+
+.card-title {
+  grid-row: 1;
+  grid-column: 2 / 6;
+  font-size: 1.1rem;
+  font-weight: bold;
+  align-self: end;
+  padding-left: 15px;
+}
+
+.card-summary {
+  grid-row: 2;
+  grid-column: 2 / 6;
+  padding-left: 15px;
+}
+
+.favorite, .add, .share {
+  width: 30px;
+  height: 30px;
+  background: url() no-repeat center;
+  align-self: center;
+  justify-self: center;
+}
+
+.favorite {
+  grid-row: 3;
+  grid-column: 3;
+  background-image: url(star-plus-outline.svg);
+}
+
+.add {
+  grid-row: 3;
+  grid-column: 4;
+  background-image: url(eye-plus-outline.svg);
+}
+
+.share {
+  grid-row: 3;
+  grid-column: 5;
+  background-image: url(share-variant-outline.svg);
 }
 
 .announcements {
