@@ -1,12 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto";
 }
 
 .grid-container {
   height: 100vh;
   width: 100vw;
   display: grid;
+  gap: 20px;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 1fr 4fr 4fr;
 }
@@ -14,6 +16,60 @@
 .header {
   grid-row: 1;
   grid-column: 2 / 4;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.icon {
+  height: 100%;
+  width: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
+}
+
+.icon.search {
+  background-image: url(magnify.svg);
+}
+
+.icon.bell {
+  background-image: url(bell-ring-outline.svg);
+}
+
+.profile {
+  width: 50px;
+  height: 50px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-self: center;
+  justify-self: center;
+  background-image: url(profile-picture-icon-27.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: lightblue;
+  background-size: 40%;
+  border-radius: 50%;
+}
+
+#searchbar {
+  border: none;
+  border-radius: 200px;
+  background-color: rgb(225, 231, 235);
+  height: 2rem;
+  flex-grow: 1;
+  align-self: center;
+  padding-left: 10px;
+  margin-right: 15%;
+}
+
+.name {
+  padding: 0 30px;
+  margin-right: 5%;
+  height: fit-content;
+  font-size: 1.3rem;
+  font-weight: bold;
+  align-self: center;
 }
 
 .nav {
