@@ -78,7 +78,9 @@
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 6fr 1.5fr 1.5fr 1.5fr;
   gap: 10px;
-  box-shadow: 0 3px 3px lightgrey;
+  box-shadow: 0 3px 3px rgb(193, 193, 193);
+  position: relative;
+  z-index: 2;
 }
 
 .profile.large {
@@ -164,6 +166,7 @@
   gap: 20px;
   padding: 10px 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  overflow: auto;
 }
 
 .card {
@@ -227,6 +230,37 @@
 .announcements {
   grid-row: 3;
   grid-column: 3;
+  background-color: rgb(225, 231, 235);
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+}
+
+.announcement-title {
+  align-self: end;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+
+.announcement-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin-right: 30px;
+  box-shadow: 2px 5px 5px rgb(198, 198, 198);
+  display: grid;
+}
+
+.announcement-card > * > :first-child {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+hr {
+  height: 0;
+  background-color:rgba(207, 208, 209, 0.7);
+  border-color: rgba(207, 208, 209, 0);
+  margin: 15px 0;
 }
 
 .trending {
